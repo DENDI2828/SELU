@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pi Web — Safe Demo</title>
+  <meta name="description" content="A safe demo site inspired by Pi Browser landing pages (no wallet keys requested)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark">π</span>
+        <span class="brand-text">Pi Web</span>
+      </div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#ecosystem">Ecosystem</a>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Welcome to the Pi Web (Safe Demo)</h1>
+        <p class="lead">
+          This is a safe, educational demo inspired by Pi-related landing pages. It does <strong>not</strong> collect wallet keys, seed phrases,
+          or any sensitive data.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="#ecosystem">Explore Ecosystem</a>
+          <a class="btn" href="#how">Learn More</a>
+        </div>
+        <p class="disclaimer">
+          <strong>Security Notice:</strong> Never enter your recovery phrase or private keys on any website. Your wallet can’t be recovered if compromised.
+        </p>
+      </div>
+      <div class="hero-card">
+        <div class="card">
+          <h3>Mock "Unlock" Panel (Demo Only)</h3>
+          <p>This box simulates the “unlock” UI without requesting sensitive info.</p>
+          <label class="field">
+            <span>Enter a <em>public</em> wallet address (optional):</span>
+            <input type="text" placeholder="pi_public_address_here" />
+          </label>
+          <button class="btn block" id="checkBtn">Check Locked Pi (Demo)</button>
+          <div id="demoResult" class="result" hidden>
+            <p><strong>Available Pi (demo):</strong> <span id="piBalance">π 0.00 / 0.00</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section id="ecosystem" class="ecosystem">
+    <div class="container">
+      <h2>Explore the Ecosystem</h2>
+      <div class="grid links">
+        <a class="card link" target="_blank" rel="noopener" href="https://wallet.pinet.com">Wallet</a>
+        <a class="card link" target="_blank" rel="noopener" href="https://brainstorm.pinet.com">Brainstorm</a>
+        <a class="card link" target="_blank" rel="noopener" href="https://mine.pinet.com">Mine</a>
+        <a class="card link" target="_blank" rel="noopener" href="https://blockexplorer.minepi.com">Blockchain</a>
+        <a class="card link" target="_blank" rel="noopener" href="https://develop.pinet.com">Develop</a>
+        <a class="card link" target="_blank" rel="noopener" href="https://kyc.pinet.com">KYC</a>
+        <a class="card link" target="_blank" rel="noopener" href="https://chat.pinet.com">Chat</a>
+        <a class="card link" target="_blank" rel="noopener" href="https://profiles.pinet.com">Profiles</a>
+        <a class="card link" target="_blank" rel="noopener" href="https://fireside.pinet.com">Fireside</a>
+        <a class="card link" target="_blank" rel="noopener" href="https://domain.pinet.com">Domain</a>
+        <a class="card link" target="_blank" rel="noopener" href="https://ecosystem.pinet.com">Ecosystem</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="how">
+    <div class="container">
+      <h2>Why an Unlock Mechanism?</h2>
+      <div class="grid two">
+        <div>
+          <h3>Core Principles</h3>
+          <ul>
+            <li>Strengthen ecosystem value</li>
+            <li>Encourage healthy transactions</li>
+            <li>Ensure fairness and long-term alignment</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Example Schedule</h3>
+          <ol>
+            <li>Year 1: 50% unlock</li>
+            <li>Year 2: 20% of remaining</li>
+            <li>Year 3: unlock rest</li>
+          </ol>
+          <p class="muted">*This content is illustrative only.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <div class="container">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Does this site collect my recovery phrase?</summary>
+        <p>No. Never share your recovery phrase. This demo will never ask for it.</p>
+      </details>
+      <details>
+        <summary>Can I use this page in Pi Browser?</summary>
+        <p>Yes. It’s a static page that runs anywhere—Pi Browser, mobile, or desktop.</p>
+      </details>
+      <details>
+        <summary>How can I deploy this?</summary>
+        <p>You can deploy on Vercel or GitHub Pages. See the README for exact steps.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Pi Web Safe Demo. Not affiliated with Pi Network.</p>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
